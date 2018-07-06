@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <Version>$(GitVersion_Version)</Version>
+    <AssemblyVersion>$(GitVersion_AssemblyVersion)</AssemblyVersion>
+    <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+    <LangVersion>latest</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Extension metods to request object to get original request url or scheme when behind a load balancer.</Description>
+    <PackageTags>http https request scheme load balancer loadbalancer</PackageTags>
+    <Authors>Philip Hoppe</Authors>
+    <Company>Miracle A/S</Company>
+    <RepositoryType>GitHub</RepositoryType>
+    <RepositoryUrl>https://github.com/PolarbearDK/RequestExtensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/PolarbearDK/RequestExtensions</PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/PolarbearDK/RequestExtensions/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+</Project>
