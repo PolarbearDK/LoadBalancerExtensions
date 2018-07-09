@@ -1,4 +1,4 @@
-# RequestExtensions
+# LoadBalancerExtensions.
 Extension metods to request object to get original request url or scheme when operating behind a load balancer.
 Methods fallback to original properties when not behind a load balancer. 
 
