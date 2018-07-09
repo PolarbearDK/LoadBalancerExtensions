@@ -12,10 +12,10 @@
     <Authors>Philip Hoppe</Authors>
     <Company>Miracle A/S</Company>
     <RepositoryType>GitHub</RepositoryType>
-    <RepositoryUrl>https://github.com/PolarbearDK/RequestExtensions</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/PolarbearDK/RequestExtensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PolarbearDK/Loadbalancerextensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/PolarbearDK/Loadbalancerextensions</PackageProjectUrl>
     <PackageIconUrl></PackageIconUrl>
-    <PackageLicenseUrl>https://github.com/PolarbearDK/RequestExtensions/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/PolarbearDK/Loadbalancerextensions/blob/master/LICENSE</PackageLicenseUrl>
     <PackageReleaseNotes>Initial version</PackageReleaseNotes>
     <Version>1.0.0</Version>
   </PropertyGroup>
