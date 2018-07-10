@@ -9,6 +9,7 @@ namespace LoadBalancerExtensions
 	public static class RequestExtensions
 	{
 		private const string OriginalProtocolHeader = "HTTP_X_FORWARDED_PROTO";
+		private const string OriginalPortHeader = "HTTP_X_FORWARDED_PORT";
 
 		/// <summary>
 		/// Returns true if the request is https or if it was originally a https (secure) request
@@ -62,6 +63,21 @@ namespace LoadBalancerExtensions
 				{
 					Scheme = scheme
 				};
+
+				if (request.Url.IsDefaultPort)
+				{
+					uri.Port = -1;
+				}
+
+				var port = request.ServerVariables[OriginalPortHeader];
+				if (port != null)
+				{
+					if (int.TryParse(port, out var intPort))
+					{
+						uri.Port = intPort;
+					}
+				}
+
 				return uri.Uri;
 			}
 
@@ -82,6 +98,21 @@ namespace LoadBalancerExtensions
 					{
 						Scheme = scheme
 					};
+
+					if (request.Url.IsDefaultPort)
+					{
+						uri.Port = -1;
+					}
+
+					var port = request.ServerVariables[OriginalPortHeader];
+					if (port != null)
+					{
+						if (int.TryParse(port, out var intPort))
+						{
+							uri.Port = intPort;
+						}
+					}
+
 					return uri.Uri;
 				}
 			}

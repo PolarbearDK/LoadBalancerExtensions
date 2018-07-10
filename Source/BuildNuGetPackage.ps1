@@ -10,6 +10,8 @@ $ErrorActionPreference = "Stop"
 if($pack) {
 	& msbuild LoadBalancerExtensions.sln /p:Configuration=Release
 	if(!$?){throw "msbuild returned exit code $LASTEXITCODE"}
+	dotnet test .\UnitTest\UnitTest.csproj  --no-build
+	if(!$?){throw "dotnet test returned exit code $LASTEXITCODE"}
 }
 
 if($push) {
